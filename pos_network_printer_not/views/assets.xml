@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <data>
+<!--    <template id="pos_network_printer_web_assets" name="My Web Assets"-->
+<!--            inherit_id="web.assets_frontend">-->
+<!--     <xpath expr="." position="inside">-->
+<!--       <script type="text/javascript"-->
+<!--               src="/pos_network_printer/static/lib/js/escpos.js"></script>-->
+
+<!--    </xpath>-->
+<!--  </template>-->
+    <template id="pos_network_printer_assets" inherit_id="point_of_sale.assets">
+      <xpath expr="." position="inside">
+        <!-- lib -->
+<!--        <script type="text/javascript" src="/pos_network_printer_not/static/src/lib/esc-pos-encoder.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer_not/static/src/lib/image.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer_not/static/src/js/KitchenReciept.js"></script>-->
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/js/printers_odoo.js"></script>
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/lib/cptable.js"></script>
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/lib/cputils.js"></script>
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/lib/deflate.js"></script>
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/lib/JSESCPOSBuilder.js"></script>
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/lib/JSPrintManager.js"></script>
+
+
+<!--        *********************************************************************************************-->
+
+<!--                <script type="text/javascript" src="/pos_network_printer_not/static/src/lib/buffer-builder.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/lib/command.js"></script>-->
+<!--         <script type="text/javascript" src="/pos_network_printer/static/src/lib/escpos.js"></script>-->
+<!--&lt;!&ndash;                <script type="text/javascript" src="/pos_network_printer/static/src/lib/image.js"></script>&ndash;&gt;-->
+<!--                <script type="text/javascript" src="/pos_network_printer/static/src/lib/index.js"></script>-->
+<!--                <script type="text/javascript" src="/pos_network_printer/static/src/lib/node-factory.js"></script>-->
+<!--                <script type="text/javascript" src="/pos_network_printer/static/src/lib/template-parser.js"></script>-->
+<!--                <script type="text/javascript" src="/pos_network_printer/static/src/lib/xml-node.js"></script>-->
+<!--                <script type="text/javascript" src="/pos_network_printer/static/src/lib/xml-parser.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/lib/cptable.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/lib/cputils.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/lib/deflate.js"></script>-->
+
+
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/lib/index.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/lib/node-factory.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/lib/template-parser.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/lib/xml-node.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/lib/xml-parser.js"></script>-->
+        <!-- pos -->
+
+<!--&lt;!&ndash;        ############################&ndash;&gt;EVng code####################################-->
+<!--        <script src="JSPrintManager.js"/>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"/>-->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"/>-->
+<!--                <script type="text/javascript" src="/pos_network_printer/static/src/lib/esc-pos-encoder.js"/>-->
+
+        <!--        *************///////////////My new adding/////////////////////****************-->
+<!--                <script type="text/javascript" src="/pos_network_printer/static/src/lib/escpos.js"></script>-->
+
+
+
+
+
+
+
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/js/models.js"></script>
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/js/printer.js"></script>
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/js/chrome.js"></script>
+        <script type="text/javazscript" src="/pos_network_printer_not/static/src/js/screens.js"></script>
+        <script type="text/javascript" src="/pos_network_printer_not/static/src/js/multiprint.js"></script>
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/js/custom.js"></script>-->
+<!--        <script type="text/javascript" src="/pos_network_printer/static/src/js/StarwScreen.js"></script>-->
+        <link rel="stylesheet" href="/pos_network_printer_not/static/src/css/chrome50.css"/>
+        <link rel="stylesheet" href="/pos_network_printer_not/static/src/css/customer_facing_display.css"/>
+        <link rel="stylesheet" href="/pos_network_printer_not/static/src/css/keyboard.css"/>
+        <link rel="stylesheet" href="/pos_network_printer_not/static/src/css/pos.css"/>
+        <link rel="stylesheet" href="/pos_network_printer_not/static/src/css/pos_receipts.css"/>
+          <script src="https://jsprintmanager.azurewebsites.net/scripts/zip.js"></script>
+    <script src="https://jsprintmanager.azurewebsites.net/scripts/zip-ext.js"></script>
+
+
+
+
+
+
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>-->
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
+
+    <!--IMPORTANT: BE SURE YOU HONOR THIS JS LOAD ORDER-->
+<!--    <script src="https://jsprintmanager.azurewebsites.net/scripts/cptable.js"></script>-->
+<!--    <script src="https://jsprintmanager.azurewebsites.net/scripts/cputils.js"></script>-->
+<!--    <script src="https://jsprintmanager.azurewebsites.net/scripts/JSESCPOSBuilder.js"></script>-->
+<!--    <script src="https://jsprintmanager.azurewebsites.net/scripts/JSPrintManager.js"></script>-->
+<!--    <script src="https://jsprintmanager.azurewebsites.net/scripts/zip.js"></script>-->
+<!--    <script src="https://jsprintmanager.azurewebsites.net/scripts/zip-ext.js"></script>-->
+<!--    <script src="https://jsprintmanager.azurewebsites.net/scripts/deflate.js"></script>-->
+<!--        -->
+<!--                <script src="external_script.js" charset="utf-8" type="text/javascript"></script>-->
+
+
+      </xpath>
+    </template>
+  </data>
+</odoo>

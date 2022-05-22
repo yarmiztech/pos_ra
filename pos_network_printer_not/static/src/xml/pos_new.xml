@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="point_of_sale.template" xml:space="preserve">
+
+	<t t-name="KitchenReciept" owl="1">
+		<div class="pos-receipt">
+			dffdgdfgdfg
+			<div class="pos-receipt-title">
+				fooooooooooooooooooo
+			</div>
+
+<!--			<div style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important">-->
+<!--				<br/>-->
+<!--				<br/>-->
+<!--				<div>-->
+<!--				 <t t-esc="receipt.date.localestring"/>-->
+<!--				</div>-->
+<!--				<br/>-->
+<!--				<div>-->
+			<t t-esc="receipt.name"/>
+			<br/>afsdfsfsdfsd
+
+			<table>
+				<tr>
+					<td>sssssssss</td>
+					<td style="background:red; ">sssssssss</td>
+					<td style="background:white; ">sssssssss</td>
+				</tr>
+			</table>
+
+<!--				</div>-->
+<!--				<br/>-->
+<!--				<div>-->
+<!--					<t t-if="receipt.table">-->
+<!--						<t t-esc="receipt.table" />-->
+<!--					</t> -->
+<!--				</div>-->
+<!--				<br/>  -->
+
+<!--				<table style="font-size:12pt;width:100%;text-shadow:none !important;">-->
+<!--&lt;!&ndash;					 <colgroup>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;						<col width='70%'/>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;						<col width='30%'/>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;						  <col width='52%' />&ndash;&gt;-->
+<!--&lt;!&ndash;                         <col width='14%'/>&ndash;&gt;-->
+<!--&lt;!&ndash;                         <col width='14%'/>&ndash;&gt;-->
+<!--&lt;!&ndash;                         <col width='20%'/>&ndash;&gt;-->
+<!--&lt;!&ndash;					</colgroup>&ndash;&gt;-->
+<!--					<tr>-->
+<!--					<th width='52%' style="text-align:center;">Name-->
+<!--					</th>-->
+<!--						<th width='14%'>Arabic-->
+<!--					</th><th width='14%'>Qty-->
+<!--					</th ><th width='20%' style="text-align:right;">Price-->
+<!--					</th>-->
+<!--					</tr>-->
+<!--					<tr t-foreach="orderlines" t-as="orderline" style="margin-top:5pt">-->
+<!--						<td style="text-align:left;vertical-align:top">-->
+<!--							<t t-esc="orderline.get_product().display_name"/>-->
+<!--						</td>-->
+<!--						<td style="text-align:left;vertical-align:top">-->
+<!--							<t t-esc="orderline.get_product().ar_name"/>-->
+<!--						</td>-->
+<!--						<td style="padding-bottom:3pt;vertical-align:top" class="pos-right-align">-->
+<!--							<t t-esc="orderline.get_quantity_str_with_unit()"/>-->
+<!--						</td>-->
+<!--						<td style="vertical-align:top" class="pos-right-align">-->
+<!--							<t t-esc="orderline.get_unit_display_price()"/>-->
+<!--						</td>-->
+<!--					</tr>-->
+<!--				</table> -->
+<!--				<div style="text-align:center; font-size: 90%; padding-top: 0px;">-->
+<!--					<t t-if="receipt.footer">-->
+<!--						<br />-->
+<!--						<div style='text-align:center'>-->
+<!--							<t t-esc="receipt.footer" />-->
+<!--						</div>-->
+<!--					</t>-->
+<!--				</div>-->
+			</div>
+<!--		</div>-->
+	</t>
+	
+<!--	<t t-name="ReceiptScreen" t-inherit="point_of_sale.ReceiptScreen" t-inherit-mode="extension" owl="1">-->
+<!--		<xpath expr="//OrderReceipt" position="after">-->
+<!--			<t t-if="env.pos.config.allow_kitchen_ticket_print">-->
+<!--				<KitchenReciept order="currentOrder" t-ref="order-receipt" />-->
+<!--			</t>-->
+<!--		</xpath>-->
+<!--	</t>-->
+
+<!--	<t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">-->
+
+<!--		<xpath expr="//t[@t-if='!isTaxIncluded']" position="replace">-->
+<!--		</xpath>-->
+
+<!--		<xpath expr="//t[@t-if='receipt.total_discount']" position="replace">-->
+<!--		</xpath>-->
+
+<!--		<xpath expr="//t[@t-if='isTaxIncluded']" position="replace">-->
+<!--		</xpath>-->
+
+<!--		<xpath expr="//div[hasclass('pos-receipt-amount')]" position="replace">-->
+<!--		</xpath>-->
+
+<!--		<xpath expr="//t[@t-foreach='receipt.paymentlines']" position="replace">-->
+<!--		</xpath>-->
+
+<!--		<xpath expr="//div[hasclass('pos-receipt-right-align')]" position="replace">-->
+<!--		</xpath>-->
+
+<!--		<xpath expr="//div[hasclass('receipt-change')]" position="replace">-->
+<!--		</xpath>-->
+
+<!--	   &lt;!&ndash;  <xpath expr="//t[@t-if='receipt.cashier']" position="replace">-->
+<!--			<div class="cashier">-->
+<!--				<div>Served by <t t-esc="receipt.cashier" /></div>-->
+<!--			</div>-->
+<!--		</xpath> &ndash;&gt;-->
+
+<!--		<xpath expr="//div[hasclass('pos-receipt-contact')]" position="replace">-->
+<!--			<div class="pos-receipt-contact">-->
+<!--&lt;!&ndash;				<div style="text-align:center; font-size:11pt; padding-top: 0px;padding-bottom: 1px;">&ndash;&gt;-->
+<!--&lt;!&ndash;				 <t t-esc="receipt.date.localestring"/>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				<br/>&ndash;&gt;-->
+<!--&lt;!&ndash;				<div style='text-align:center;font-weight:bold; font-size:11pt;'>&ndash;&gt;-->
+<!--&lt;!&ndash;					<t t-esc="receipt.name"/>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				<br/>&ndash;&gt;-->
+<!--&lt;!&ndash;				<div style='text-align:center;font-weight:bold; font-size:11pt;'>&ndash;&gt;-->
+<!--&lt;!&ndash;					<t t-if="receipt.table">&ndash;&gt;-->
+<!--&lt;!&ndash;						<t t-esc="receipt.table" />&ndash;&gt;-->
+<!--&lt;!&ndash;					</t> &ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				<br/>&ndash;&gt;-->
+<!--&lt;!&ndash;				<div style='text-align:center;font-weight:bold; font-size:11pt;'>&ndash;&gt;-->
+<!--&lt;!&ndash;					<t t-esc="receipt.company.name"/>&ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				<div style='text-align:center; font-size:11pt;'>&ndash;&gt;-->
+<!--&lt;!&ndash;					<t t-if="receipt.table">&ndash;&gt;-->
+<!--&lt;!&ndash;						Customer: <t t-esc="env.pos.get_client().name"/>&ndash;&gt;-->
+<!--&lt;!&ndash;					</t> &ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				&lt;!&ndash; <br/>  &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;				<div style='text-align:center; font-size:11pt;'>&ndash;&gt;-->
+<!--&lt;!&ndash;					<t t-if="receipt.table">&ndash;&gt;-->
+<!--&lt;!&ndash;						Cashier: <t t-esc="env.pos.get_cashier().name"/>&ndash;&gt;-->
+<!--&lt;!&ndash;					</t> &ndash;&gt;-->
+<!--&lt;!&ndash;				</div>&ndash;&gt;-->
+<!--&lt;!&ndash;				<t t-if="receipt.header">&ndash;&gt;-->
+<!--&lt;!&ndash;					<div style='text-align:center;padding-top:5pt'>&ndash;&gt;-->
+<!--&lt;!&ndash;						<t t-esc="receipt.header"/>&ndash;&gt;-->
+<!--&lt;!&ndash;					</div>&ndash;&gt;-->
+<!--&lt;!&ndash;					<br/>&ndash;&gt;-->
+<!--&lt;!&ndash;				</t>&ndash;&gt;-->
+<!--			</div>-->
+<!--		</xpath>-->
+
+<!--		<xpath expr="//div[hasclass('orderlines')]" position="replace">-->
+<!--			<div class="orderlines">-->
+<!--				<table style="border-bottom:1pt dashed black;margin-top:-20pt;padding:5pt;font-size:12pt">-->
+<!--					<colgroup>-->
+<!--						<col width='50%'/>-->
+<!--						<col width='25%'/>-->
+<!--						<col width='25%'/>-->
+<!--					</colgroup>-->
+<!--					<tr t-foreach="orderlines" t-as="orderline" style="margin-top:5pt">-->
+<!--						<td style="text-align:left;padding-bottom:3pt;padding-top:2pt;vertical-align:top">-->
+<!--							<t t-esc="orderline.get_product().display_name"/>-->
+<!--&lt;!&ndash;							<t t-if="orderline.get_discount() > 0">&ndash;&gt;-->
+<!--&lt;!&ndash;								<div class="pos-disc-font">&ndash;&gt;-->
+<!--&lt;!&ndash;									With a<t t-esc="orderline.get_discount()"/>% discount&ndash;&gt;-->
+<!--&lt;!&ndash;								</div>&ndash;&gt;-->
+<!--&lt;!&ndash;							</t>&ndash;&gt;-->
+<!--						</td>-->
+<!--						<td style="padding-bottom:3pt;padding-top:2pt;vertical-align:top" class="pos-center-align">-->
+<!--							<t t-esc="orderline.get_quantity_str_with_unit()"/>-->
+<!--						</td>-->
+
+<!--						<td style="padding-bottom:3pt;padding-top:2pt;vertical-align:top" class="pos-right-align" >-->
+<!--							<t t-esc="env.pos.format_currency(orderline.get_display_price())"/>-->
+<!--						</td>-->
+<!--					</tr>-->
+<!--				</table>-->
+
+<!--				<table style="border-bottom:1pt dashed black;font-size:12pt;width:100%;margin-bottom:-20pt; font-weight:bold;" class='receipt-total'>-->
+<!--					<colgroup>-->
+<!--						<col width='34%'/>-->
+<!--						<col width='33%'/>-->
+<!--						<col width='33%'/>-->
+<!--					</colgroup>-->
+<!--					<tr>-->
+<!--						<td style="padding-bottom:3pt;padding-top:3pt"></td>-->
+<!--						<td style="padding-bottom:3pt;padding-top:3pt">TOTAL</td>-->
+<!--						<td style="text-align:right;padding-bottom:3pt;padding-top:3pt;padding-right:1pt">-->
+<!--							<t t-esc="env.pos.format_currency(receipt.subtotal)"/>-->
+<!--						</td>-->
+<!--					</tr>-->
+<!--					<t t-foreach="receipt.tax_details" t-as="taxdetail">-->
+<!--						<tr>-->
+<!--							<td style="padding-bottom:3pt;padding-top:3pt"></td>-->
+<!--							<td style="padding-bottom:3pt;padding-top:3pt">-->
+<!--								<t t-esc="taxdetail.name"/>-->
+<!--							</td>-->
+<!--							<td style="text-align:right;padding-bottom:3pt;padding-top:3pt;padding-right:1pt">-->
+<!--								<t t-esc="env.pos.format_currency(taxdetail.amount)"/>-->
+<!--							</td>-->
+<!--						</tr>-->
+<!--					</t>-->
+<!--					<tr>-->
+<!--						<t t-if="receipt.total_discount">-->
+<!--							<td style="padding-bottom:3pt;padding-top:3pt"></td>-->
+<!--							<td style="padding-bottom:3pt;padding-top:3pt">Discount</td>-->
+<!--							<td style="text-align:right;padding-bottom:3pt;padding-top:3pt;padding-right:1pt">-->
+<!--								<span  t-esc="env.pos.format_currency(receipt.total_discount)" class="pos-receipt-center-align"/>-->
+<!--							</td>-->
+<!--						</t>-->
+<!--					</tr>-->
+<!--					<tr>-->
+<!--						<td style="padding-bottom:3pt;padding-top:3pt"></td>-->
+<!--						<td style="padding-bottom:3pt;padding-top:3pt">Net Total</td>-->
+<!--						<td style="text-align:right;padding-bottom:3pt;padding-top:3pt;padding-right:1pt">-->
+<!--							<t t-esc="env.pos.format_currency(receipt.total_with_tax)"/>-->
+<!--						</td>-->
+<!--					</tr>-->
+
+<!--					<t t-foreach="paymentlines" t-as="line">-->
+<!--						<tr>-->
+<!--							<td style="padding-bottom:3pt;padding-top:3pt"></td>-->
+<!--							<td style="padding-bottom:3pt;padding-top:3pt">-->
+<!--								<t t-esc="line.name"/>-->
+<!--							</td>-->
+<!--							<td style="text-align:right;padding-bottom:3pt;padding-top:3pt;padding-right:1pt">-->
+<!--								<t t-esc="env.pos.format_currency(line.get_amount())"/>-->
+<!--							</td>-->
+<!--						</tr>-->
+<!--					</t>-->
+<!--					<tr>-->
+<!--						<td style="padding-bottom:3pt;padding-top:3pt"></td>-->
+<!--						<td style="padding-bottom:3pt;padding-top:3pt">Change</td>-->
+<!--						<td style="text-align:right;padding-bottom:3pt;padding-top:3pt;padding-right:1pt">-->
+<!--							<t t-esc="env.pos.format_currency(receipt.change)"/>-->
+<!--						</td>-->
+<!--					</tr>-->
+<!--				</table>-->
+<!--			</div>-->
+<!--		</xpath>-->
+
+<!--		<xpath expr="//br[4]" position="replace">-->
+<!--		</xpath>-->
+<!--		<xpath expr="//br[5]" position="replace">-->
+<!--		</xpath>-->
+<!--		<xpath expr="//br[6]" position="replace">-->
+<!--		</xpath>-->
+
+
+<!--		<xpath expr="//div[hasclass('pos-receipt-order-data')]" position="replace">-->
+
+<!--		</xpath>-->
+<!--	</t>-->
+</templates>

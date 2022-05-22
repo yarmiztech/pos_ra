@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+<!--     <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">-->
+<!-- <div class="pos-receipt">-->
+
+<!--     <div class="pos-receipt-contact" position="replace">-->
+<!--          <xpath expr="//img[hasclass('pos-receipt-logo')]" position="replace">-->
+<!--         </xpath>-->
+
+
+<!--         <div style="text-align:center; font-size:10pt; padding-top: 0px;padding-bottom: 1px;">-->
+<!--                 <t t-esc="receipt.date.localestring"/>-->
+<!--                </div>-->
+<!--         <br/>-->
+<!--         <div style='text-align:center;font-weight:bold; font-size:10pt;'>-->
+<!--                    <t t-esc="receipt.name"/>-->
+<!--                </div>-->
+<!--         <br/>-->
+<!--         <div style='text-align:center;font-weight:bold; font-size:10pt;'>-->
+<!--                    <t t-if="receipt.table">-->
+<!--                        <t t-esc="receipt.table"/>-->
+<!--                    </t>-->
+<!--                </div>-->
+<!--         &lt;!&ndash; <br/>   &ndash;&gt;-->
+
+<!--         <table style="margin-top:5pt;padding:5pt;font-size:10pt;width:100%;" class='receipt-orderlines'>-->
+<!--                     <colgroup>-->
+<!--                        <col width='52%'/>-->
+<!--                         <col width='14%'/>-->
+<!--                         <col width='14%'/>-->
+<!--                         <col width='20%'/>-->
+<!--                    </colgroup>-->
+<!--             <tr t-foreach="orderlines" t-as="orderline">-->
+<!--                        <td style="text-align:left;padding-bottom:3pt;padding-top:2pt;vertical-align:top">-->
+<!--                            <t t-esc="orderline.get_product().display_name"/>-->
+<!--                            <t t-if="orderline.get_product().ar_name">-->
+<!--                                <br/>-->
+<!--                                <t t-esc="orderline.get_product().ar_name"/>-->
+<!--                            </t>-->
+<!--                        </td>-->
+<!--                 <td style="padding-bottom:3pt;padding-top:2pt;vertical-align:top" class="pos-right-align">-->
+<!--                            <t t-esc="orderline.description"/>-->
+<!--                        </td>-->
+<!--                 <td style="padding-bottom:3pt;padding-top:2pt;vertical-align:top">-->
+<!--                            <t t-esc="orderline.get_quantity_str_with_unit()"/>-->
+<!--                        </td>-->
+<!--                 <td style="padding-bottom:3pt;padding-top:2pt;vertical-align:top" class="pos-right-align">-->
+<!--                             &lt;!&ndash; <t t-esc="env.pos.format_currency_no_symbol(orderline.get_lst_price())"/> &ndash;&gt;-->
+<!--                     <t t-esc="env.pos.format_currency(orderline.get_display_price())"/>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--         <div style="text-align:center; font-size:11pt; padding-top: 0px;">-->
+<!--                    <t t-if="receipt.footer">-->
+<!--                        <br/>-->
+<!--                        <div style='text-align:center'>-->
+<!--                            <t t-esc="receipt.footer"/>-->
+<!--                        </div>-->
+<!--                    </t>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--         <xpath expr="//div[hasclass('orderlines')]" position="replace">-->
+<!--            <div class="orderlines">-->
+<!--            </div>-->
+<!--          </xpath>-->
+<!--         <xpath expr="//t[@t-if='!isTaxIncluded']" position="replace">-->
+<!--        </xpath>-->
+
+<!--         <xpath expr="//t[@t-if='isTaxIncluded']" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//t[@t-if='receipt.total_discount']" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//br[4]" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//br[5]" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//br[6]" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//div[hasclass('pos-receipt-right-align')]" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//div[hasclass('pos-receipt-amount')]" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//t[@t-foreach='receipt.paymentlines']" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//div[hasclass('pos-receipt-order-data')]/div/t[@t-esc='receipt.name']" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//div[hasclass('receipt-change')]" position="replace">-->
+<!--        </xpath>-->
+<!--         <xpath expr="//div[hasclass('cashier')]" position="replace">-->
+<!--        </xpath>-->
+
+<!--     </t>-->
+
+    <t t-name="StrawScreen" owl="1">
+        <div class="receipt-screen screen">
+            <div class="screen-content">
+                <div class="top-content">
+                    <span class="button back" t-on-click="confirm">
+                        <i class="fa fa-angle-double-left"></i>
+                        <span> </span>
+                        <span>Back</span>
+                    </span>
+                    <div class="top-content-center">
+                        <h1>Straw Printing</h1>
+                    </div>
+                    <span class="button next highlight" t-on-click="confirm">
+                        <span>Ok</span>
+                        <span> </span>
+                        <i class="fa fa-angle-double-right"></i>
+                    </span>
+                </div>
+                <div class="centered-content">
+                    <div class="button print" t-on-click="printReceipt">
+                        <i class="fa fa-print"></i>
+                        <span> </span>
+                        <span>Print</span>
+                    </div>
+<!--                    <div class="pos-receipt-container">-->
+<!--                        <KitchenReciept order="currentOrder" t-ref="order-receipt"/>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>
